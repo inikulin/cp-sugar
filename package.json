@@ -1,0 +1,37 @@
+{
+  "name": "cp-swag",
+  "version": "1.0.0",
+  "description": "child_process'in like a boss.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint index.js test && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inikulin/cp-swag.git"
+  },
+  "keywords": [
+    "child_process",
+    "exec",
+    "spawn",
+    "promise"
+  ],
+  "author": "Ivan Nikulin (ifaaan@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inikulin/cp-swag/issues"
+  },
+  "homepage": "https://github.com/inikulin/cp-swag#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "cross-spawn-async": "^2.1.6",
+    "pinkie-promise": "^2.0.0",
+    "promisify-event": "^1.0.0"
+  }
+}
