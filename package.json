@@ -25,13 +25,19 @@
     "url": "https://github.com/inikulin/cp-swag/issues"
   },
   "homepage": "https://github.com/inikulin/cp-swag#readme",
+  "files": [
+    "index.js"
+  ],
   "devDependencies": {
+    "del": "^2.2.0",
     "eslint": "^1.10.3",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "multiline": "^1.0.2"
   },
   "dependencies": {
     "cross-spawn-async": "^2.1.6",
     "pinkie-promise": "^2.0.0",
-    "promisify-event": "^1.0.0"
+    "promisify-event": "^1.0.0",
+    "shell-quote": "^1.4.3"
   }
 }

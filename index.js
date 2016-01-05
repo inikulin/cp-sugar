@@ -3,6 +3,7 @@
 var exec           = require('child_process').exec;
 var spawn          = require('cross-spawn-async');
 var promisifyEvent = require('promisify-event');
+var toArgv         = require('shell-quote').parse;
 var Promise        = require('pinkie-promise');
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
     },
 
     spawn: function (command, silent) {
-        var args = command.split(/\s/);
+        var args = toArgv(command);
 
         command = args.shift();
 
