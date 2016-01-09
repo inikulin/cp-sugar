@@ -1,11 +1,11 @@
-# cp-swag
-[![Build Status](https://api.travis-ci.org/inikulin/cp-swag.svg)](https://travis-ci.org/inikulin/cp-swag)
+# cp-sugar
+[![Build Status](https://api.travis-ci.org/inikulin/cp-sugar.svg)](https://travis-ci.org/inikulin/cp-sugar)
 
-*child_process'in like a boss.*
+*Some sugar for child_process module.*
 
 ## Install
 ```
-npm install cp-swag
+npm install cp-sugar
 ```
 
 ## Usage

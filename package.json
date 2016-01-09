@@ -1,7 +1,7 @@
 {
-  "name": "cp-swag",
+  "name": "cp-sugar",
   "version": "1.0.0",
-  "description": "child_process'in like a boss.",
+  "description": "Some sugar for child_process module.",
   "main": "index.js",
   "directories": {
     "test": "test"

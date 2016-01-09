@@ -49,12 +49,40 @@ describe('spawn', function () {
                 /*
                 node -e "require('fs').writeFileSync('yoyo.txt', 'test')"
                 */
-            }))
+            }), true)
             .then(function () {
                 return exists('yoyo.txt');
             })
             .then(assert);
     });
 
-    //TODO
+    it('Should reject if process has non-zero exit code', function () {
+        return spawn(
+            ml(function () {
+                /*
+                node -e "process.exit(1)"
+                */
+            }), true)
+            .then(function () {
+                throw 'Promise rejection expected';
+            })
+            .catch(function (err) {
+                assert.strictEqual(err.message, 'Command `node` exited with code 1.');
+            });
+    });
+
+    it('Should reject with process error', function () {
+        return spawn(
+            ml(function () {
+                /*
+                node -e "throw 'oops!'"
+                */
+            }), true)
+            .then(function () {
+                throw 'Promise rejection expected';
+            })
+            .catch(function (err) {
+                assert(/Command `node` exited with code \d+./.test(err.message));
+            });
+    });
 });
