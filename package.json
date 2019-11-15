@@ -1,6 +1,6 @@
 {
   "name": "cp-sugar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some sugar for child_process module.",
   "main": "index.js",
   "directories": {

@@ -14,7 +14,7 @@ module.exports = {
                     reject(err);
                 else
                     resolve(stdout.trim());
-            });
+            }).unref();
         });
     },
 
@@ -25,6 +25,8 @@ module.exports = {
 
         var stdio = silent ? 'ignore' : 'inherit';
         var proc  = spawn(command, args, { stdio: stdio });
+
+        proc.unref();
 
         var error = promisifyEvent(proc, 'error')
             .catch(function (err) {
